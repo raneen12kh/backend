@@ -5,13 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "node index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "setup": "node scripts/setupLocal.js",
+    "test-db": "node scripts/testDb.js",
+    "create-staff": "node scripts/createStaff.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^17.4.2",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.2.0",
+    "mongodb-memory-server": "^11.2.0",
     "mongoose": "^9.6.3"
   }
 }
